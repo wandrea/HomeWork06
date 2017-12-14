@@ -43,12 +43,12 @@ public class Triangle extends AbstractShape {
 
     @Override
     public float getArea() {
-        return 0;
+       return (float) (a*c*Math.sin(beta))/2;
     }
 
     @Override
     public float getPerimeter() {
-        return 0;
+        return a+b+c;
     }
 
     @Override
