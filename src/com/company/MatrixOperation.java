@@ -55,7 +55,18 @@ public class MatrixOperation implements IMatrixOperation {
 
     @Override
     public int[][] sum(int[][] matrix1, int[][] matrix2) {
-        return new int[0][];
+        //létrehozok egy új mátrixot, amiben az eredmény lesz.
+        //mivel ugyanakkor a két bemenő paraméterként kapott mátrix, így a forral elég egyben végigmennem
+        //és a két mátrix azonos i és j-vel rendelkező elemét összeadom majd az eredmény mátrix i-j-edik helyére rakom.
+        int[][] sumMatrix = new int [matrix1.length][matrix1[0].length];
+        for (int i = 0; i <matrix1.length ; i++) {
+            for (int j = 0; j <matrix1[i].length; j++) {
+              sumMatrix[i][j]=  matrix1[i][j] + matrix2[i][j];
+
+            }
+
+        }
+        return sumMatrix;
     }
 }
 
